@@ -159,17 +159,69 @@
                             
                             <p id="construccion">
                             <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Construcción</h1>
-                            <p class="fs-6 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe. The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe. The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
-                            <p class="fs-6 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
+                            <p class="fs-6 mb-4">Para la construcción del circuito, primero se organizaron los componentes en una protoboard, asegurando que cada microcontrolador tuviera una configuración funcional y ordenada. Se conectaron los LEDs con sus resistencias de 220Ω a los pines digitales de salida, y los botones con resistencias de pull-down de 10kΩ a las entradas digitales.</p>
+                            <p class="fs-6 mb-4">Arduino Uno y ESP32 se conectaron por USB a la computadora.</p>
+                            <p class="fs-6 mb-4">ATtiny requirió un programador AVR para la carga del código y una alimentación externa de 5V.</p>
+                            <p class="fs-6 mb-4">Tras realizar las conexiones, se cargaron los códigos y se probaron individualmente, verificando que los LEDs encendieran, parpadearan y respondieran correctamente a los botones según la programación.</p>
                             
+<section id="resultados">
+    <h2 class="fw-bolder mb-4 mt-5 fs-5">- Resultados -</h2>
+    <p class="fs-6 mb-4">
+        Tras la simulación y pruebas en hardware, se observaron diferencias en el desempeño de los microcontroladores. 
+        <strong>Arduino Uno</strong> mostró una ejecución estable y facilidad de programación, pero con menor capacidad de procesamiento. 
+        <strong>ESP32</strong>, gracias a su mayor velocidad y conectividad, permitió tiempos de respuesta más rápidos, aunque su consumo energético fue mayor. 
+        <strong>ATtiny</strong>, al ser un microcontrolador compacto y eficiente, cumplió con las tareas básicas, pero con limitaciones en memoria y funcionalidad avanzada.
+    </p>
+    <p class="fs-6 mb-4">
+        Los cuatro códigos funcionaron correctamente en cada microcontrolador, aunque el <strong>ESP32</strong> mostró menor latencia en la respuesta de los botones y el parpadeo del LED. 
+        En contraste, <strong>ATtiny</strong> presentó tiempos de ejecución más prolongados debido a su menor frecuencia de reloj. 
+        Estos resultados permiten concluir que la elección del microcontrolador depende del equilibrio entre rendimiento, consumo y facilidad de implementación.
+    </p>
+</section>
 
-                        <p id="resultados">
-                        <h2 class="fw-bolder mb-4 mt-5 fs-5">- Resultados -</h2>
-                        <p class="fs-6 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe. The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe. The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
-                        <p class="fs-6 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
-                        <figure class="mb-4" align="center"><video width="80%"  controls>
-                            <source src="video/Robot.mp4" type="video/mp4">
-                        </video></p></figure>
+<section id="videos">
+    <h2 class="fw-bolder mb-4 mt-5 fs-5">- Videos de la Práctica -</h2>
+    
+    <p class="fs-6 mb-4">
+        A continuación, se presentan cuatro videos que documentan el desarrollo y pruebas realizadas en la simulación y hardware físico:
+    </p>
+    
+    <ul class="fs-6 mb-4">
+        <li><strong>Video 1:</strong> Arduino Uno con el primer código (Encender un LED).</li>
+        <li><strong>Video 2:</strong> Arduino Uno con el segundo código (Parpadear un LED).</li>
+        <li><strong>Video 3:</strong> ESP32 con el tercer código (Encender un LED con un botón).</li>
+        <li><strong>Video 4:</strong> ATtiny con el cuarto código (Encender y apagar un LED con un botón y un if).</li>
+    </ul>
+
+    <figure class="mb-4" align="center">
+        <video width="80%" controls>
+            <source src="/Arduino_Uno_Encender_LED.mp4" type="video/mp4">
+        </video>
+        <figcaption>Arduino Uno - Encender un LED</figcaption>
+    </figure>
+
+    <figure class="mb-4" align="center">
+        <video width="80%" controls>
+            <source src="video/Arduino_Uno_Parpadear_LED.mp4" type="video/mp4">
+        </video>
+        <figcaption>Arduino Uno - Parpadear un LED</figcaption>
+    </figure>
+
+    <figure class="mb-4" align="center">
+        <video width="80%" controls>
+            <source src="video/ESP32_Encender_LED_Boton.mp4" type="video/mp4">
+        </video>
+        <figcaption>ESP32 - Encender un LED con un botón</figcaption>
+    </figure>
+
+    <figure class="mb-4" align="center">
+        <video width="80%" controls>
+            <source src="video/ATtiny_Encender_Apagar_LED_Boton.mp4" type="video/mp4">
+        </video>
+        <figcaption>ATtiny - Encender y apagar un LED con un botón y un if</figcaption>
+    </figure>
+</section>
+
 
                         <p id="conclusiones">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Conclusiones -</h2>
